@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+
+  demo:
+    # Rebuilds the fictional sample data from the simulator (it must match what is committed) and a screenshot of the report.
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the demo
+        run: python -m detcover demo
+      - name: The committed sample data is the simulator's
+        run: git diff --exit-code sample_data
+      - name: Screenshot of the report
+        run: |
+          google-chrome --headless=new --no-sandbox --hide-scrollbars --force-device-scale-factor=1 \
+            --window-size=1100,1500 --screenshot=report.png "file://$PWD/output/report.html"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-report
+          path: |
+            output/
+            report.png

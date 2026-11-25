@@ -1,0 +1,26 @@
+{
+  "organisation": "Fabrikam Logistics",
+  "review": "2026-11-25 09:00:00",
+  "days": 30,
+  "silent_hours": 24,
+  "drop_pct": 50,
+  "noisy_min": 10,
+  "noisy_pct": 80,
+  "unused_gb": 1.0,
+  "triage_hours": {
+    "High": 4,
+    "Medium": 24,
+    "Low": 72
+  },
+  "late_pct": 25,
+  "open_days": 7,
+  "unclassified_pct": 20,
+  "score_amber": 90,
+  "score_red": 75,
+  "previous_score": 77.3,
+  "owners": {
+    "soc": "Marta Iglesias (SOC)",
+    "engineering": "Daniel Ortega (Detection engineering)",
+    "platform": "Sergio Romero (Log platform)"
+  }
+}

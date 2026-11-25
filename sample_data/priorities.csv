@@ -1,0 +1,23 @@
+Technique,Name,Tactic,Priority,Why
+T1078,Valid Accounts,Initial Access,high,Stolen passwords are how most intrusions here would start
+T1110.003,Password Spraying,Credential Access,high,Seen against the tenant every week
+T1566,Phishing,Initial Access,high,Carriers and customers send invoices by email all day
+T1059.001,PowerShell,Execution,high,First step of most hands-on-keyboard attacks
+T1003,OS Credential Dumping,Credential Access,high,Leads straight to domain admin
+T1021.001,Remote Desktop Protocol,Lateral Movement,high,RDP is open between the depot servers
+T1486,Data Encrypted for Impact,Impact,high,Ransomware would stop the warehouses
+T1490,Inhibit System Recovery,Impact,high,Deleting shadow copies comes just before encryption
+T1098,Account Manipulation,Persistence,high,MFA methods and roles added to stolen accounts
+T1114.003,Email Forwarding Rule,Collection,high,Invoice fraud starts with a forwarding rule
+T1567,Exfiltration Over Web Service,Exfiltration,high,Customer data uploaded to file-sharing sites
+T1558.003,Kerberoasting,Credential Access,high,Service accounts with old passwords
+T1136,Create Account,Persistence,medium,
+T1562,Impair Defenses,Defense Evasion,medium,
+T1070.001,Clear Windows Event Logs,Defense Evasion,medium,
+T1053.005,Scheduled Task,Persistence,medium,
+T1190,Exploit Public-Facing Application,Initial Access,medium,The carrier portal is on the internet
+T1133,External Remote Services,Initial Access,medium,Drivers' tablets and suppliers use the VPN
+T1071,Application Layer Protocol,Command and Control,medium,
+T1484,Domain or Tenant Policy Modification,Defense Evasion,medium,
+T1528,Steal Application Access Token,Credential Access,medium,
+T1048,Exfiltration Over Alternative Protocol,Exfiltration,medium,

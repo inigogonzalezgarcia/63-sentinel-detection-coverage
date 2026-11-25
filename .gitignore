@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+
+# Local data and generated output (your real exports stay out of Git;
+# the fictional files in sample_data/ are committed on purpose)
+/output/
+/rules*.csv
+/sources*.csv
+/tables*.csv
+/ingestion*.csv
+/incidents*.csv
+/health*.csv
+/priorities*.csv
+/settings.json
+/data/
+/logs/
+/report.png
+
+# Secrets
+.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

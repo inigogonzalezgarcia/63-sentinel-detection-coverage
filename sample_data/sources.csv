@@ -1,0 +1,13 @@
+Source,Table,Owner,Critical,MaxDelayHours
+Entra ID sign-ins,SigninLogs,Identity team,yes,6
+Entra ID audit,AuditLogs,Identity team,yes,6
+Domain controllers (security events),SecurityEvent,Windows team,yes,6
+Defender for Endpoint (processes),DeviceProcessEvents,Workplace team,yes,6
+Defender for Endpoint (logons),DeviceLogonEvents,Workplace team,no,24
+Defender for Identity,IdentityDirectoryEvents,Identity team,no,24
+Microsoft 365 activity,OfficeActivity,Collaboration team,yes,6
+Firewalls (CEF),CommonSecurityLog,Network team,yes,6
+Linux servers (syslog),Syslog,Linux team,no,24
+Azure activity,AzureActivity,Cloud team,no,24
+AWS CloudTrail,AWSCloudTrail,Cloud team,no,24
+Defender XDR alerts,SecurityAlert,Workplace team,yes,6

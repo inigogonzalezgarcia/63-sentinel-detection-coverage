@@ -1,0 +1,17 @@
+Table,LastRecord
+SigninLogs,2026-11-25 08:38:00
+AuditLogs,2026-11-25 08:29:00
+SecurityEvent,2026-11-25 08:29:00
+DeviceProcessEvents,2026-11-25 08:33:00
+DeviceLogonEvents,2026-11-25 08:27:00
+DeviceFileEvents,2026-11-25 08:26:00
+IdentityDirectoryEvents,2026-11-25 08:34:00
+OfficeActivity,2026-11-25 08:57:00
+CommonSecurityLog,2026-11-20 14:12:00
+Syslog,2026-11-25 08:20:00
+AzureActivity,2026-11-25 08:51:00
+SecurityAlert,2026-11-25 08:57:00
+AzureDiagnostics,2026-11-25 08:46:00
+ContainerLogV2,2026-11-25 08:46:00
+Heartbeat,2026-11-25 08:21:00
+ThreatIntelligenceIndicator,2026-11-25 08:27:00

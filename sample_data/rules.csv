@@ -1,0 +1,39 @@
+Rule,Kind,Enabled,Severity,Tactics,Techniques,Tables,Frequency,Source,TemplateVersion,LatestVersion,Modified
+Sign-in from an unfamiliar country,Scheduled,yes,Medium,InitialAccess,T1078,SigninLogs,PT1H,Custom,,,2025-03-04
+Impossible travel between two sign-ins,Scheduled,yes,Medium,InitialAccess,T1078,SigninLogs,PT1H,Content hub,1.4.0,1.4.0,2025-09-18
+Password spray against Entra ID,Scheduled,yes,High,CredentialAccess,T1110.003,SigninLogs,PT1H,Content hub,2.0.1,2.1.0,2025-02-11
+Sign-in to a break-glass account,NRT,yes,High,InitialAccess,T1078,SigninLogs,,Custom,,,2026-01-20
+Phishing link clicked (Defender XDR),Scheduled,yes,High,InitialAccess,T1566,SecurityAlert,PT15M,Custom,,,2025-06-02
+Encoded PowerShell command line,Scheduled,yes,Medium,Execution,T1059.001,DeviceProcessEvents,PT1H,Content hub,1.2.0,1.3.2,2025-05-12
+LSASS memory read by an unsigned process,NRT,yes,High,CredentialAccess,T1003,DeviceProcessEvents,,Custom,,,2025-10-07
+RDP from the internet to a server,Scheduled,yes,High,LateralMovement;InitialAccess,T1021.001;T1133,CommonSecurityLog,PT1H,Custom,,,2025-04-22
+RDP between two workstations,Scheduled,yes,Medium,LateralMovement,T1021.001,DeviceLogonEvents,PT1H,Custom,,,2025-04-22
+Burst of renamed files with a new extension,NRT,yes,High,Impact,T1486,DeviceFileEvents,,Custom,,,2025-08-30
+Shadow copies deleted,NRT,no,High,Impact,T1490,DeviceProcessEvents,,Content hub,1.1.0,1.1.0,2026-09-14
+MFA method added to an admin account,Scheduled,yes,High,Persistence,T1098,AuditLogs,PT30M,Custom,,,2026-02-03
+Kerberoasting: RC4 service tickets for many accounts,Scheduled,yes,High,CredentialAccess,T1558.003,SecurityEvent,PT1H,Content hub,1.0.2,1.0.2,2025-07-15
+Large upload to a file-sharing site,Scheduled,yes,High,Exfiltration,T1567,CommonSecurityLog,PT1H,Custom,,,2025-11-03
+Mass download from SharePoint then upload out,Scheduled,yes,High,Exfiltration;Collection,T1567,OfficeActivity;CommonSecurityLog,PT1H,Custom,,,2026-03-10
+Account created and deleted within an hour,Scheduled,yes,Medium,Persistence,T1136,AuditLogs;SecurityEvent,PT1H,Content hub,1.0.4,1.0.4,2025-02-11
+Tamper protection turned off (Defender XDR),Scheduled,yes,High,DefenseEvasion,T1562,SecurityAlert,PT15M,Custom,,,2025-06-02
+Security event log cleared,NRT,yes,Medium,DefenseEvasion,T1070.001,SecurityEvent,,Content hub,1.0.1,1.0.1,2025-02-11
+Scheduled task created by an unusual process,Scheduled,yes,Medium,,,DeviceProcessEvents,PT1H,Custom,,,2026-05-19
+Web attack blocked then allowed on the carrier portal,Scheduled,yes,High,InitialAccess,T1190,CommonSecurityLog,PT1H,Custom,,,2026-01-12
+VPN sign-in from a new country,Scheduled,yes,Medium,InitialAccess,T1133,CommonSecurityLog,PT1H,Custom,,,2025-04-22
+Beaconing to a rare domain,Scheduled,yes,Medium,CommandAndControl,T1071,CommonSecurityLog,PT1H,Custom,,,2025-12-01
+Connection to a threat intelligence address,Scheduled,yes,Medium,CommandAndControl,T1071,CommonSecurityLog;ThreatIntelligenceIndicator,PT1H,Content hub,2.2.0,2.2.0,2025-09-18
+Conditional Access policy changed,Scheduled,yes,Medium,DefenseEvasion,T1484,AuditLogs,PT1H,Custom,,,2026-02-03
+Group Policy object modified,Scheduled,yes,Low,DefenseEvasion,T1484,SecurityEvent,PT1H,Custom,,,2025-03-04
+OAuth app granted mail permissions,Scheduled,yes,High,CredentialAccess,T1528,AuditLogs,PT1H,Content hub,1.0.3,1.1.0,2025-02-11
+Large transfer from a Linux server,Scheduled,yes,Medium,Exfiltration,T1048,Syslog,PT1H,Custom,,,2025-11-03
+SSH brute force on a Linux server,Scheduled,yes,Low,CredentialAccess,T1110,Syslog,PT1H,Custom,,,2025-11-03
+Sudo to root by a new user,Scheduled,yes,Medium,PrivilegeEscalation,T1548.003,Syslog,PT1H,Custom,,,2025-11-03
+Multiple failed logons on a server,Scheduled,yes,Low,CredentialAccess,T1110,SecurityEvent,PT1H,Custom,,,2025-03-04
+AWS root account used,NRT,yes,High,InitialAccess;PrivilegeEscalation,T1078.004,AWSCloudTrail,,Content hub,1.0.0,1.0.0,2026-04-08
+AWS CloudTrail logging stopped,Scheduled,yes,High,DefenseEvasion,T1562.008,AWSCloudTrail,PT1H,Content hub,1.0.0,1.0.0,2026-04-08
+Admin sign-in outside working hours,Scheduled,yes,Low,,,SigninLogs,PT1H,Custom,,,2026-06-23
+Bulk external sharing from Teams,Scheduled,yes,Medium,,,OfficeActivity,PT1H,Custom,,,2026-07-07
+Printer driver installed by a user,Scheduled,yes,Low,,,DeviceProcessEvents,P1D,Custom,,,2026-08-11
+Advanced multistage attack detection,Fusion,yes,High,,,,,Microsoft,,,2025-02-11
+Defender XDR incidents,MicrosoftSecurityIncidentCreation,yes,Medium,,,SecurityAlert,,Microsoft,,,2025-02-11
+"Test rule, do not use",Scheduled,no,Low,,,SigninLogs,PT5M,Custom,,,2026-03-02
